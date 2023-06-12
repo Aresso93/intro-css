@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,400;1,100&family=Tilt+Prism&display=swap');
+/*il link sopra si collega a Googlefonts e prende il font. Da adesso lo posso usare dove voglio*/
+body{
+    background-color: crimson;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 100;
+}
+
+/* h1{
+background-color: blue;
+} */
+
+/*Cambiando la width, ho ridotto quanto l'"evidenziatore" è lungo. Da tutto lo schermo a 500 px di larghezza. Defininedo height, cambio quanto si estende in verticale*/
+.first-title{
+font-family: 'Tilt Prism', cursive;
+    background-color: chartreuse;
+width: 50%;
+/* max-width: 400px;
+min-width: 200px; */
+height: 400px;
+overflow:auto;
+/* padding: 24px; */
+margin: 24px;
+/* padding-left: 40px; */
+padding: 50px 20px;
+/* box-sizing: border-box;  */
+
+/*Aggiungendo questa stringa sopra, rendo la mia height impostata da me quella effettiva, contando contenuto e padding. Si può applicare anche alla larghezza*/
+}
+/*Se le metto in ordine come sopra, le fa dalla top e poi va in senso orario, quindi top, right, bottom, left*/
+
+/*Il padding non è conteggiato nei px della height: è SOLO la height del contenuto, per cui per sapere la dimensione reale devo sommare quella messa da me e quella del padding*/
+
+/*Padding = margine interno; margin = margine esterno*/
+/*Se un elemento è troppo grande per il riquadro, posso impostare l'overflow per gestire la cosa. Di solito non si usa scroll, bensì overflow:auto*/
+
+/*Le dimensioni si possono anche esprimere in percentuale, riferita alla dimensione del genitore.
+Se faccio così, la dimensione del quadrato verde è variabile e cambia col body, di cui è figlio
+Posso dirgli che voglio un max o un min impostando min-width e max-width
+*/
+
+.white-font{
+    color:white
+}
+
+#hello-title{
+    height: 100px;
+    color:rgb(30, 15, 235);
+    /* border-style: solid;
+    border-width: 20px;
+    border-color: magenta; */
+    border: 30px solid magenta;
+    /*Posso definire tutti e tre gli elementi anche di seguito come sopra, senza metterli in tre stringhe separate*/
+    /* box-sizing: border-box; */
+    border-radius: 50px 20px 100px 2px;
+/*border-top-left-radius, per esempio, mi permette di modificare solamente il top left */ 
+/*Radius indica la curvatura del bordo del riquadro*/
+/*Se voglio dare border diversi, vanno nell'ordine top left, top right, bottom right, bottom left*/
+}
+/*In questo modo posso editare SOLO gli H1 che sono dentro un <div>*/
+.il-mio-div h1{
+    border: solid;
+}
+
+/*In questo modo, TUTTI gli <h1> e TUTTI i <p> saranno maiuscoli a prescindere*/
+/* h1, p{
+    text-transform: uppercase;
+} */
+
+.empty-div{
+    border: 1px solid white;
+    width: 100%; 
+    height: 800px;
+    background-image: url("./assets/Ippopotamo grande.jpg");
+    /*Nota sugli URL relativi: se dovessi pescare qualcosa da una cartella di un livello superiore, dovrei mettere ../, 
+    ovvero con tanti .. a seconda dei livelli che devo navigare all'indietro. Poteva essere, per dire, ../../blabla/file.estensione*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /*background-size: contain prende la dimensione più grande e resiza l'altra di conseguenza. Hover fa lo stesso con l'altra dimensione*/
+    /*Se non imposto questo^, l'ippopotamo piccolo si ripeterà fino a occupare tutto lo spazio*/
+    /*Con cover, invece, occupa con la stessa immagine tutto il riquadro che gli abbiamo dato da riempire
+    Posso anche decidere che cosa coprire*/
+}
+
+/* Vediamo inline, block e inlineblock */
+
+.border{
+    border: 2px solid white;
+    /*tutti i nostri div ora hanno il border bianco*/
+}
+
+.example-div{
+height: 20px;
+background-color: aqua;
+display: block;
+/*display:block gli dà la width del genitore, mentre la height è o quella del suo contenuto, o quella definita dal CSS (se presente)
+Un elemento display block non può avere niente vicino
+*/    
+
+}
+
+.example-img{
+    width: 300px;
+    display: inline-block;
+}
+
+.example-a{
+    /* width: 300px; */
+    display: inline;
+    /*Il bordo dei link ha width che dipende dal contenuto (testo più grande o più voluminoso), per cui non viene affected da dirgli quanti pixel avere, ma se metto inline-block
+    anche per lui, anche lui si ingrossa*/
+}
+
+/* positions */
+
+.scatola{
+    border: 2px solid rgb(89, 0, 255);
+    height: 300px;
+}
+
+.s-a{
+    background-color: aqua;
+}
+
+.s-b{
+    background-color: greenyellow;
+}
+
+.s-c{
+    background-color: purple;
+}
+
+.s-d{
+background-color: beige;
+}
+
+.s-e{
+    background-color: aquamarine;
+}
+
+.s-f{
+    background-color: yellow;
+}
+
+.s-g{
+    background-color: limegreen;
+}
+
+.s-h{
+    background-color: navy;
+}
+
+.s-i{
+    background-color: orange;
+}
+
+.s-l{
+    background-color: black;
+}
