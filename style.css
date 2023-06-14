@@ -75,10 +75,12 @@ Posso dirgli che voglio un max o un min impostando min-width e max-width
     /*Nota sugli URL relativi: se dovessi pescare qualcosa da una cartella di un livello superiore, dovrei mettere ../, 
     ovvero con tanti .. a seconda dei livelli che devo navigare all'indietro. Poteva essere, per dire, ../../blabla/file.estensione*/
     background-repeat: no-repeat;
+     /*Se non imposto questo^, l'ippopotamo piccolo si ripeterà fino a occupare tutto lo spazio*/
     background-size: cover;
     background-position: center;
+     
     /*background-size: contain prende la dimensione più grande e resiza l'altra di conseguenza. Hover fa lo stesso con l'altra dimensione*/
-    /*Se non imposto questo^, l'ippopotamo piccolo si ripeterà fino a occupare tutto lo spazio*/
+   
     /*Con cover, invece, occupa con la stessa immagine tutto il riquadro che gli abbiamo dato da riempire
     Posso anche decidere che cosa coprire*/
 }
