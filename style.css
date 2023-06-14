@@ -125,6 +125,11 @@ Un elemento display block non può avere niente vicino
 
 .s-b{
     background-color: greenyellow;
+    position: relative;
+    /*la stringa qui sopra è necessaria, sennò non sposta la scatola con le indicazioni che gli abbiamo dato */
+    left: 50px;
+    top: 100px;
+    /*le posizioni di solito le applichiamo con le parole chiave top, bottom, left e right*/
 }
 
 .s-c{
@@ -133,18 +138,45 @@ Un elemento display block non può avere niente vicino
 
 .s-d{
 background-color: beige;
+position: absolute;
+/*se metto absolute a un elemento, perde la capacità dei <div> di estendersi quando si vuole*/
+width: 100px;
+height: 100px;
+/*ho dovuto mettergli le dimensioni perché sennò era come se non le avesse*/
+/*è come se una scatola con la posizione absolute non occupasse spazio. "Galleggia" dove l'avevo messa prima*/
+left: 50px;
+top: 100px;
+
+/*se le do delle posizioni come alla scatola b, si dispone NELLA PAGINA rispetto a dove ho indicato. Quindi 50px da sinistra e 100 da sopra
+rispetto a tutto il foglio, e non alla posizione che aveva prima*/
+/*Se le tolgo le dimensioni e le do delle indicazioni come left, right ecc., la scatola si stretcha per rispettarle*/
 }
 
 .s-e{
     background-color: aquamarine;
+    position: relative;
 }
 
 .s-f{
     background-color: yellow;
+    width: 200px;
+    height: 200px;
+    position:absolute;
+    top:100px;
+    right:100px;
+    /*l'abbiamo resa assoluta e quindi non ha più la proprietà del tag madre, cioè div
+    se però il genitore è relative, torna a dipendere dal genitore
+    elemento che deve contenere: va messo relative; elemento che deve essere contenuto: absolute*/
 }
 
 .s-g{
     background-color: limegreen;
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    top: 100px;
+    right: 100px;
+    /*se gli metto la posizione fixed, quando scorri rimane allo stesso punto perché è la posizione rispetto a ciò che si vede, e non alla pagina*/
 }
 
 .s-h{
@@ -153,6 +185,10 @@ background-color: beige;
 
 .s-i{
     background-color: orange;
+    position: sticky;
+    bottom: 0px;
+    /*se metto sticky, rimane sempre in vista. Quando rischia di uscire dalla view, si "appiccica" alla posizione data (per esempio se voglio un footer che si vede sempre)
+    qui la mia scatola torna alla posizione che le ho dato io quando arrivo alla sua parte della pagina. Sennò mi segue come scrollo*/
 }
 
 .s-l{
